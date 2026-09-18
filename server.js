@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+app.set("view engine", "ejs");
 
 const projects = [
   { name: 'Weather app', tag: 'javascript' },
@@ -16,6 +17,10 @@ app.get('/projects', (req, res) => {
 
   const matches = projects.filter(p => p.tag === tag);
   res.json(matches); // no matches → empty array, not an error/message
+});
+
+app.get("/about", (req, res) => {
+  res.render("about", { title: "About" });
 });
 
 app.listen(3000, () => console.log('Server running on port 3000'));

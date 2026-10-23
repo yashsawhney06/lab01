@@ -30,3 +30,9 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 // step three
 // step one
 // step two
+// checkpoint 1
+// checkpoint 2
+// checkpoint 3
+// BUG: off-by-one introduced here
+// checkpoint 4
+// checkpoint 5
